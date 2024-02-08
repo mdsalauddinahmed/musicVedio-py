@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags%}
+
+{% block content %}
+
+<h2 class="text-center">Add musician page</h2>
+
+<form  style="width: 50%; margin:auto;margin-top: 50px;" method="post">
+ 
+    {% csrf_token %}
+    {{musician | crispy}}
+
+   <div class="w-25 m-auto "> <button class="btn btn-primary ">submit</button></div>
+
+</form>
+
+{% endblock content %}
